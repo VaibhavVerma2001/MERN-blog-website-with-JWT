@@ -37,6 +37,10 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 });
 
 
+app.get("/" , (req,res)=>{
+    res.status(200).json("Hello from Backendd!");
+})
+
 // ********************* Authentication******************
 
 //register
