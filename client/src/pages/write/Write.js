@@ -32,14 +32,14 @@ export default function Write() {
             newPost.photo = filename;
             try {
                 // upload image
-                await axios.post("http://localhost:5000/api/upload", data);
+                await axios.post("https://mern-blog-app-backend-with-jwt.onrender.com/api/upload", data);
             } catch (err) {
                 console.log(err);
             }
         }
         try {
             // now upload newPost 
-            const res = await axios.post("http://localhost:5000/api/posts/createpost", newPost,{
+            const res = await axios.post("https://mern-blog-app-backend-with-jwt.onrender.com/api/posts/createpost", newPost,{
                 headers: {
                     token: "bearer " + localStorage.getItem('accessToken'),
                 }

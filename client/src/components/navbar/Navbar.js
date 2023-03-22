@@ -14,7 +14,7 @@ const Navbar = () => {
     const [toggle, setToggle] = useState(false);
     // to show stored image in api folder
     // make Public folder
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://mern-blog-app-backend-with-jwt.onrender.com/images/";
 
     const context = useContext(UserContext);
     const { user, setUser, mode, setMode } = context;

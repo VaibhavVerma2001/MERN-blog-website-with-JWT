@@ -25,7 +25,7 @@ function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       setProgress(10);
-      const res = await axios.get("http://localhost:5000/api/posts"+search,{
+      const res = await axios.get("https://mern-blog-app-backend-with-jwt.onrender.com/api/posts"+search,{
         headers: {
           token: "bearer " + localStorage.getItem('accessToken'),
         }

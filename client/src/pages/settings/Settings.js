@@ -20,7 +20,7 @@ function Setting() {
 
     // to show stored image in api folder
     // make Public folder
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://mern-blog-app-backend-with-jwt.onrender.com/images/";
 
     const handleUpdate = async (e) => {
         e.preventDefault();
@@ -39,14 +39,14 @@ function Setting() {
             updatedUser.profilePic = filename;
             try {
                 // upload image
-                await axios.post("http://localhost:5000/api/upload", data);
+                await axios.post("https://mern-blog-app-backend-with-jwt.onrender.com/api/upload", data);
             } catch (err) {
                 console.log(err);
             }
         }
         try {
             // now update user 
-            const res = await axios.put(`http://localhost:5000/api/users/update/${user._id}`, updatedUser,
+            const res = await axios.put(`https://mern-blog-app-backend-with-jwt.onrender.com/api/users/update/${user._id}`, updatedUser,
                 {
                     headers: {
                         token: "bearer " + localStorage.getItem('accessToken'),
@@ -67,7 +67,7 @@ function Setting() {
     // delete account
     const handleDelete = async () => {
         try {
-            const res = await axios.delete(`http://localhost:5000/api/users/delete/${user._id}`, {
+            const res = await axios.delete(`https://mern-blog-app-backend-with-jwt.onrender.com/api/users/delete/${user._id}`, {
                 headers: {
                     token: "bearer " + localStorage.getItem('accessToken'),
                 }
