@@ -2,8 +2,7 @@
 
 Complete MERN stack website with JWT authentication 
 
-Website Link -- mern-blog-app-vaibhav.netlify.app (Note -- backend hosted on Render which is FREE to use, Hence little Bit slow)
-
+Website Link (Note -- backend hosted on Render which is FREE to use, Hence little Bit slow) -- mern-blog-app-vaibhav.netlify.app 
 Backend hosted on Render -- https://mern-blog-app-backend-with-jwt.onrender.com/
 
 API Collection -- https://documenter.getpostman.com/view/26479783/2s93RL2c32#intro
