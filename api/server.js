@@ -39,7 +39,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 
 app.get("/" , (req,res)=>{
     res.status(200).json("Hello from Backend!");
-})
+});
 
 // ********************* Authentication******************
 
@@ -270,7 +270,7 @@ app.get("/api/posts",verify, async (req, res) => {
             });
             // if no query then fetch all posts
         } else {
-            posts = await Post.find({});
+            posts = await Post.find({}).sort({createdAt:-1, updatedAt:-1});
         }
         res.status(200).json(posts);
     } catch (err) {
