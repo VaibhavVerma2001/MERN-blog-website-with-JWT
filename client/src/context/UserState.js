@@ -2,8 +2,8 @@ import UserContext from "./UserContext";
 import { useState } from "react";
 
 const UserState = (props) => {
-    const [user, setUser] = useState(null); //if user then set user else null, parse because in localStorage it is in string format
-    
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem("user"))|| null); 
+    // console.log(JSON.parse(localStorage.getItem("user"))|| null);
     // loading bar
     const [progress, setProgress] = useState(0);
     // dark-light mode

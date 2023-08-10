@@ -21,10 +21,11 @@ function Login() {
                 password: credentials.password
             });
             const data = res.data;
-            console.log(data);
+            // console.log(data);
             if (data.success) {
                 setUser(data.user); // So that can get redirected itself without refreshing the page
-                localStorage.setItem("user", JSON.stringify(data));
+                console.log(data.user);
+                localStorage.setItem("user", JSON.stringify(data.user));
                 localStorage.setItem("accessToken", data.accessToken);
             }
 
